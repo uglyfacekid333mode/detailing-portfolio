@@ -1,0 +1,8 @@
+{
+  // Конфиг для Cloudflare: отдаём статичный сайт (index.html и т.д.)
+  "name": "detailing-portfolio",
+  "compatibility_date": "2025-01-01",
+  "assets": {
+    "directory": "."
+  }
+}
