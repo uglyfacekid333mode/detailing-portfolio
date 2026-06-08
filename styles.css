@@ -352,6 +352,10 @@ section[id] { scroll-margin-top: 84px; }
 .channel.is-gis .channel__icon { color: #3cc85a; }
 .channel.is-tt  .channel__icon { color: var(--text); }
 .channel.is-mail .channel__icon { color: var(--accent); }
+.channel.is-vb  .channel__icon { color: #7360f2; }
+.channel.is-vk  .channel__icon { color: #0077ff; }
+.channel.is-fb  .channel__icon { color: #1877f2; }
+.channel.is-yt  .channel__icon { color: #ff0000; }
 .channel.is-wa:hover   { background: rgba(37,211,102,0.16); border-color: #25d366; }
 .channel.is-tg:hover   { background: rgba(41,171,226,0.16); border-color: #29abe2; }
 .channel.is-ig:hover   { background: rgba(225,48,108,0.16); border-color: #e1306c; }
@@ -388,6 +392,10 @@ section[id] { scroll-margin-top: 84px; }
 .dock__btn.is-tg  { background: #29abe2; }
 .dock__btn.is-ig  { background: linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888); }
 .dock__btn.is-gis { background: #2bb34b; }
+.dock__btn.is-vb  { background: #7360f2; }
+.dock__btn.is-vk  { background: #0077ff; }
+.dock__btn.is-fb  { background: #1877f2; }
+.dock__btn.is-yt  { background: #ff0000; }
 .dock__btn:nth-child(1){animation-delay:.05s}.dock__btn:nth-child(2){animation-delay:.12s}
 .dock__btn:nth-child(3){animation-delay:.19s}.dock__btn:nth-child(4){animation-delay:.26s}
 @keyframes dockIn { to { opacity: 1; transform: translateY(0) scale(1); } }

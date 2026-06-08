@@ -30,6 +30,10 @@
     'is-gis':  '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>',
     'is-tt':   '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 5.82a4.28 4.28 0 0 1-1.06-2.82h-3.1v12.6a2.52 2.52 0 1 1-2.52-2.52c.18 0 .35.02.52.06v-3.18a5.62 5.62 0 1 0 5.1 5.6V9a7.34 7.34 0 0 0 4.29 1.38V7.28a4.28 4.28 0 0 1-3.23-1.46z"/></svg>',
     'is-mail': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>',
+    'is-vk':   '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.2 16.4c-5.3 0-8.7-3.7-8.8-9.8h2.7c.1 4.5 2.1 6.3 3.6 6.7V6.6h2.5v3.9c1.5-.2 3-1.8 3.6-3.9h2.5c-.4 2.6-2 4.2-3.1 4.9 1.1.5 2.9 2 3.6 4.9h-2.8c-.5-1.8-1.9-3.1-3.4-3.4v3.4h-.4z"/></svg>',
+    'is-fb':   '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 9.3h2.6l.4-3.2H14V4c0-.9.3-1.6 1.7-1.6h1.5V-.4C16.9-.5 16 -.6 14.9-.6c-2.4 0-4.1 1.5-4.1 4.2v2.5H8v3.2h2.8V18H14V9.3z"/></svg>',
+    'is-vb':   '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.9 2 3 5.5 3 10c0 2 .8 3.8 2.3 5.2-.1 1.5-.6 2.9-1.5 3.9 1.5-.2 2.8-.8 3.9-1.6 1.3.5 2.8.8 4.3.8 5.1 0 9-3.5 9-8s-3.9-8.3-9-8.3zm0 14.6c-1.4 0-2.7-.3-3.9-.8l-.3-.2-1.7.5.4-1.6-.2-.3C5.1 13 4.5 11.6 4.5 10c0-3.5 3.3-6.4 7.5-6.4s7.5 2.9 7.5 6.4-3.4 6.6-7.5 6.6zm2.3-4.4c-.2-.1-1.2-.6-1.4-.7-.2-.1-.3-.1-.5.1l-.6.7c-.1.1-.2.1-.4 0-1.2-.6-2-1.3-2.7-2.4-.1-.2 0-.3.1-.4l.3-.4c.1-.1.1-.2.2-.4 0-.1 0-.3 0-.4l-.6-1.4c-.1-.3-.3-.3-.4-.3h-.4c-.1 0-.3.1-.5.3-.6.6-.7 1.4-.5 2.2.5 1.6 1.7 2.9 3.2 3.6.5.2.9.4 1.4.4.6 0 1.2-.3 1.5-.9.1-.3.1-.6 0-.7z"/></svg>',
+    'is-yt':   '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 7.5c-.3-1-1-1.7-2-2C19.2 5 12 5 12 5s-7.2 0-9 .5c-1 .3-1.7 1-2 2C.5 9.3.5 12 .5 12s0 2.7.5 4.5c.3 1 1 1.7 2 2C4.8 19 12 19 12 19s7.2 0 9-.5c1-.3 1.7-1 2-2 .5-1.8.5-4.5.5-4.5s0-2.7-.5-4.5zM9.7 15.3V8.7l6 3.3-6 3.3z"/></svg>',
   };
 
   let revealObs = null, countObs = null;
@@ -124,12 +128,17 @@
     const wa = C.links?.whatsappLink || (C.contact?.whatsapp
       ? `https://wa.me/${C.contact.whatsapp}?text=${encodeURIComponent(C.whatsappPrefill || '')}` : '');
     const mail = C.contact?.email ? 'mailto:' + C.contact.email : '';
+    const viber = C.links?.viber || (C.contact?.viberPhone ? 'viber://chat?number=' + C.contact.viberPhone : '');
     const CH = [
       { url: wa, label: 'WhatsApp', cls: 'is-wa' },
       { url: C.links?.telegram, label: 'Telegram', cls: 'is-tg' },
       { url: C.links?.instagram, label: 'Instagram', cls: 'is-ig' },
+      { url: viber, label: 'Viber', cls: 'is-vb' },
       { url: C.links?.twogis, label: '2ГИС', cls: 'is-gis' },
       { url: C.links?.tiktok, label: 'TikTok', cls: 'is-tt' },
+      { url: C.links?.vk, label: 'VK', cls: 'is-vk' },
+      { url: C.links?.facebook, label: 'Facebook', cls: 'is-fb' },
+      { url: C.links?.youtube, label: 'YouTube', cls: 'is-yt' },
       { url: mail, label: 'Почта', cls: 'is-mail' },
     ].filter(c => c.url).map(c => ({ ...c, icon: ICONS[c.cls] || '' }));
 
@@ -137,7 +146,7 @@
     if (channels) channels.innerHTML = CH.map(c =>
       `<a class="channel ${c.cls}" href="${c.url}" target="_blank" rel="noopener"><span class="channel__icon">${c.icon}</span>${c.label}</a>`).join('');
     const dock = document.getElementById('dock');
-    if (dock) dock.innerHTML = CH.filter(c => ['is-wa', 'is-tg', 'is-ig', 'is-gis'].includes(c.cls))
+    if (dock) dock.innerHTML = CH.filter(c => ['is-wa', 'is-tg', 'is-vb', 'is-ig', 'is-gis'].includes(c.cls))
       .map(c => `<a class="dock__btn ${c.cls}" href="${c.url}" target="_blank" rel="noopener" aria-label="${c.label}" title="${c.label}">${c.icon}</a>`).join('');
 
     const SOCIAL = [
