@@ -1,0 +1,13 @@
+# Локальные инструменты — НЕ публикуем (редактор только для тебя)
+admin.html
+admin.css
+admin.js
+
+# Служебное
+deploy/
+*.zip
+КАК-ВЫЛОЖИТЬ.txt
+node_modules/
+.wrangler/
+.DS_Store
+*.log
