@@ -11,26 +11,26 @@ const CONFIG = {
     "image": "",
     "autoResize": true,
     "maxHeight": 40,
-    "name": "Ваше",
-    "nameAccent": "ДетейлингНазвание"
+    "name": "DETAIL",
+    "nameAccent": "STUDIO"
   },
   "brand": {
-    "full": "ВДН"
+    "full": "DETAIL STUDIO"
   },
   "contact": {
     "phone": "+7 (700) 018-44-20",
     "phoneDial": "+77000184420",
     "whatsapp": "77000184420",
-    "email": "hello@apexdetailing.kz",
+    "email": "hello@detailstudio.kz",
     "address": "г. Алматы, ул. Карбон 14",
     "hours": "Пн–Сб · 09:00–19:00"
   },
   "links": {
-    "instagram": "https://instagram.com/apexdetailing",
-    "telegram": "https://t.me/apexdetailing",
+    "instagram": "https://instagram.com/detailstudio",
+    "telegram": "https://t.me/detailstudio",
     "whatsappLink": "",
     "twogis": "https://2gis.kz/almaty",
-    "tiktok": "https://tiktok.com/@apexdetailing",
+    "tiktok": "https://tiktok.com/@detailstudio",
     "youtube": "",
     "vk": "",
     "facebook": ""
@@ -39,10 +39,10 @@ const CONFIG = {
     "embedUrl": "https://widgets.2gis.com/widget?type=firmsonmap"
   },
   "hero": {
-    "eyebrow": "ваше надпись сверху",
-    "titleLine1": "Ваш слоган",
-    "titleAccent": "ваш слоган",
-    "subtitle": "Ваш подзоголовок",
+    "eyebrow": "Студия премиального детейлинга",
+    "titleLine1": "Ваш автомобиль достоин",
+    "titleAccent": "блеска как из салона.",
+    "subtitle": "Полировка кузова, керамические покрытия и тщательный уход за салоном — от мастеров, которые относятся к каждой машине как к флагману.",
     "ctaPrimary": "Записаться на детейлинг",
     "ctaSecondary": "Наши работы"
   },
@@ -142,7 +142,7 @@ const CONFIG = {
     "before": "",
     "after": ""
   },
-  "whatsappPrefill": "Здравствуйте, Apex Detailing! Хочу рассчитать стоимость.",
+  "whatsappPrefill": "Здравствуйте, DETAIL STUDIO! Хочу рассчитать стоимость.",
   "text": {
     "navServices": "Услуги",
     "navWork": "Работы",
